@@ -1,0 +1,485 @@
+/* ==========================================================================
+   ORGANIZATION EVENTS FEED & APPLICANT MANAGEMENT - TEAL THEME
+   ========================================================================== */
+
+.organization-events-page {
+  background-color: #f8fafb;
+  min-height: 100vh;
+  padding: 40px 0 80px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #1e293b;
+}
+
+.organization-events-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.events-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.page-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #159e90;
+  letter-spacing: 1px;
+  margin: 0 0 6px 0;
+}
+
+.events-page-header h1 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 8px 0;
+}
+
+.page-subtitle {
+  color: #64748b;
+  font-size: 0.98rem;
+  margin: 0;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.create-event-btn {
+  background: linear-gradient(135deg, #159e90 0%, #0d6b62 100%);
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(21, 158, 144, 0.3);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.create-event-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(21, 158, 144, 0.45);
+}
+
+.dashboard-btn {
+  background: #ffffff;
+  color: #475569;
+  border: 1px solid #cbd5e1;
+  padding: 12px 20px;
+  border-radius: 50px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.events-count-bar {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #334155;
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #e2e8f0;
+
+  span {
+    color: #159e90;
+  }
+}
+
+.organization-event-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+@media (max-width: 1024px) {
+  .organization-event-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .organization-event-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.organization-event-card {
+  background: #ffffff;
+  border-radius: 20px;
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+  transition: all 0.2s ease;
+}
+
+.organization-event-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(21, 158, 144, 0.12);
+  border-color: rgba(21, 158, 144, 0.3);
+}
+
+.event-card-banner {
+  position: relative;
+  height: 160px;
+}
+
+.event-card-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 100%);
+}
+
+.category-pill-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(15, 23, 42, 0.8);
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 50px;
+  backdrop-filter: blur(4px);
+  text-transform: uppercase;
+}
+
+.status-badge-pill {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 50px;
+}
+
+.status-badge-pill.open {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.status-badge-pill.closed {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.organization-event-content {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.organization-event-content h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 10px 0;
+}
+
+.event-description {
+  color: #64748b;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 16px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.event-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: #475569;
+  margin-bottom: 18px;
+}
+
+.org-capacity-section {
+  margin-top: auto;
+  margin-bottom: 20px;
+}
+
+.capacity-text {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.82rem;
+  color: #64748b;
+  margin-bottom: 6px;
+}
+
+.capacity-text strong {
+  color: #0f172a;
+}
+
+.track-bar {
+  height: 6px;
+  background: #e2e8f0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.fill-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #159e90, #2dd4bf);
+  border-radius: 10px;
+}
+
+.event-card-footer {
+  display: flex;
+  gap: 10px;
+}
+
+.applicants-btn {
+  flex: 1;
+  background: #e6f7f5;
+  color: #0d6b62;
+  border: 1px solid rgba(21, 158, 144, 0.3);
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.applicants-btn:hover {
+  background: #159e90;
+  color: #ffffff;
+}
+
+.view-event-btn {
+  background: #f1f5f9;
+  color: #475569;
+  text-decoration: none;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+/* APPLICANTS MODAL */
+.applicants-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(12, 35, 34, 0.7);
+  backdrop-filter: blur(4px);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.applicants-modal-card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 680px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.3);
+}
+
+.applicants-modal-card .modal-header {
+  background: #0d6b62;
+  color: #ffffff;
+  padding: 24px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.applicants-modal-card .modal-header h3 {
+  margin: 0 0 4px 0;
+  color: #ffffff;
+}
+
+.applicants-modal-card .modal-header .sub {
+  margin: 0;
+  color: #cbd5e1;
+  font-size: 0.88rem;
+}
+
+.applicants-modal-card .modal-body {
+  padding: 24px;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.applicant-item-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 18px;
+  background: #f8fafb;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  margin-bottom: 14px;
+}
+
+.applicant-top-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.vol-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #0d6b62;
+  color: #ffffff;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.vol-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.applicant-info {
+  flex-grow: 1;
+}
+
+.applicant-info strong {
+  font-size: 1.05rem;
+  color: #0f172a;
+}
+
+.contact-sub {
+  font-size: 0.82rem;
+  color: #64748b;
+  margin: 2px 0 0 0;
+}
+
+.vol-detail-block {
+  font-size: 0.84rem;
+  color: #475569;
+}
+
+.vol-detail-block strong {
+  color: #334155;
+  margin-right: 6px;
+}
+
+.detail-text {
+  margin: 2px 0 0 0;
+  color: #64748b;
+}
+
+.app-message-box {
+  background: #ffffff;
+  border-left: 3px solid #159e90;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+
+  strong {
+    color: #0d6b62;
+    display: block;
+    margin-bottom: 2px;
+  }
+
+  p {
+    margin: 0;
+    font-style: italic;
+    color: #334155;
+  }
+}
+
+.applicant-skills {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.applicant-skills .skill-chip {
+  background: #e6f7f5;
+  color: #0d6b62;
+  font-size: 0.75rem;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.applicant-action-zone {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.status-pill {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 50px;
+}
+
+.status-pill.pending {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+.status-pill.accepted {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.status-pill.rejected {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.btn-group {
+  display: flex;
+  gap: 6px;
+}
+
+.accept-btn {
+  background: #10b981;
+  color: #ffffff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.reject-btn {
+  background: #ef4444;
+  color: #ffffff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+}

@@ -1,0 +1,223 @@
+.complete-profile-page {
+  min-height: calc(100vh - 55px);
+  background: #f1f8f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+.complete-profile-card {
+  width: 100%;
+  max-width: 550px;
+  background: #ffffff;
+  border: 1px solid #d6ebe7;
+  border-radius: 20px;
+  padding: 40px;
+  box-sizing: border-box;
+  box-shadow: 0 12px 35px rgba(16, 63, 59, 0.08);
+  text-align: left;
+}
+
+.complete-profile-card h2 {
+  margin: 0;
+  color: #083f3a;
+  font-size: 24px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.complete-profile-card .subtitle {
+  margin: 8px 0 28px;
+  color: #78908c;
+  font-size: 13px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* Form Styles */
+.complete-profile-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label,
+.profile-input-group label {
+  color: #294f4a;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.form-group input,
+.form-group textarea,
+.profile-input-group input {
+  width: 100%;
+  padding: 10px 14px;
+  box-sizing: border-box;
+  border: 1px solid #cfe3df;
+  border-radius: 8px;
+  outline: none;
+  background: #fbfdfd;
+  color: #16433e;
+  font-size: 13px;
+  font-family: inherit;
+  transition: all 0.2s ease;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder,
+.profile-input-group input::placeholder {
+  color: #9aafac;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.profile-input-group input:focus {
+  border-color: #39c6b4;
+  box-shadow: 0 0 0 3px rgba(57, 198, 180, 0.12);
+  background: #ffffff;
+}
+
+/* Image preview section */
+.form-group-with-preview {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  background: #fdfefe;
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid #f1f8f7;
+}
+
+@media (max-width: 480px) {
+  .form-group-with-preview {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+}
+
+.avatar-preview-container {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #e2f6f3;
+  border: 2px solid #39c6b4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(39, 175, 160, 0.1);
+}
+
+.avatar-preview-placeholder {
+  font-size: 32px;
+  font-weight: 800;
+  color: #159e90;
+  line-height: 1;
+}
+
+.avatar-preview-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-input-group {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+}
+
+/* Helper text */
+.help-text {
+  color: #78908c;
+  font-size: 11px;
+  margin-top: 2px;
+}
+
+/* Errors & Success */
+.error-text {
+  color: #d05252;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.server-error {
+  background: #fff2f2;
+  border: 1px solid #ffd4d4;
+  color: #c84444;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 13px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.success-banner {
+  background: #e2f6f3;
+  border: 1px solid #c2ece5;
+  color: #159e90;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Submit Button */
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #39c6b4;
+  color: #073f3b;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(39, 175, 160, 0.16);
+  transition: all 0.2s ease;
+}
+
+.submit-btn:hover {
+  background: #2fb5a5;
+  transform: translateY(-1px);
+}
+
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.loading-screen {
+  padding: 100px;
+  font-size: 20px;
+  color: #159e90;
+  font-weight: 700;
+  text-align: center;
+}
