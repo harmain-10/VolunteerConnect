@@ -10,6 +10,12 @@ console.log("App loaded");
 //middleware
 app.use(cors());
 app.use(express.json());
+
+app.get("/", (req, res) => {
+  res.json({ message: "VolunteerConnect API is running" });
+});
+
+
 app.use("/api/auth",authRoute)
 app.use("/api/admin",adminroute);
 app.use("/api/events", eventroute);
