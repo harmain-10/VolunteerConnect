@@ -1,4 +1,4 @@
-VolunteerConnect** is designed to streamline volunteer recruitment, opportunity discovery, and event participation management. Organizations can publish community initiatives, while volunteers can search by city/category, apply with their profile details, and receive verified participation passes once accepted.
+VolunteerConnect is designed to streamline volunteer recruitment, opportunity discovery, and event participation management. Organizations can publish community initiatives, while volunteers can search by city/category, apply with their profile details, and receive verified participation passes once accepted.
 The platform includes full administrative governance to verify and approve non-profit organizations before they can publish public events.
 ---
 ## 🚀 Key Features
