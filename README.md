@@ -1,7 +1,7 @@
 VolunteerConnect is designed to streamline volunteer recruitment, opportunity discovery, and event participation management. Organizations can publish community initiatives, while volunteers can search by city/category, apply with their profile details, and receive verified participation passes once accepted.
 The platform includes full administrative governance to verify and approve non-profit organizations before they can publish public events.
 ---
-## 🚀 Key Features
+##  Key Features
 ### 🙋 For Volunteers
 - **Smart Opportunity Discovery:** Browse opportunities filtered by category (*Environment, Education, Health, Food & Hunger, Animals, Community, Arts*), date, and city (*Lahore, Karachi, Islamabad, etc.*).
 - **One-Click Event Application:** Apply with pre-filled profile data, contact details, skills, and optional motivation messages.
@@ -21,7 +21,7 @@ The platform includes full administrative governance to verify and approve non-p
 - **Role-Based Access Control (RBAC):** Strict middleware enforcement for `volunteer`, `organization`, and `admin` routes on both backend API and React frontend router.
 - **Password Security:** Salted password hashing with `bcryptjs`.
 ---
-## 👥 User Roles & Workflows
+##  User Roles & Workflows
 ```mermaid
 flowchart TD
     A[User Registration] --> B{Choose Role}
